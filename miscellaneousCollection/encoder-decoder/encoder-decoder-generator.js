@@ -91,6 +91,21 @@ button.addEventListener("click", function() {
     cpybtn.classList.remove('hidden');
 });
 
+
+const encodeHtml = (s)=> {
+    return s.replace(/&/g, "&amp;")
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+  };
+  
+const decodeHtml = (s)=> {
+    return s.replace(/&lt;/g, "<")
+            .replace(/&gt;/g, ">")
+            .replace(/&quot;/g, '"')
+            .replace(/&amp;/g, "&")
+  };
+
 const formatMap = {
     'Encode-base64' : (data)=>{
         var words = CryptoJS.enc.Utf8.parse(data); 
@@ -106,7 +121,7 @@ const formatMap = {
         return encodeURIComponent(data);
     },
     'Encode-html' : (data)=>{
-        return data.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return encodeHtml(data);
     },
     'Decode-base64' : (data)=>{
         var words = CryptoJS.enc.Base64.parse(data);
@@ -131,7 +146,7 @@ const formatMap = {
         return decodeURIComponent(data);
     },
     'Decode-html' : (data)=>{
-        return data.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+        return decodeHtml(data);
     },
     'Hash-sha1' : (data)=>{
         return CryptoJS.SHA1(data).toString();
