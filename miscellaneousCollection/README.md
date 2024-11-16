@@ -8,11 +8,7 @@ url : https://darshanaguru.github.io/jac/miscellaneousCollection/
 
 ## Attribution
 
-All rights for external resources used in this project are reserved by their respective owners. Attribution for each resource is provided as comments within the relevant code files, where applicable. Please refer to the [Attributions](https://github.com/DarshanAguru/jac/blob/main/ATTRIBUTIONS.md) file for more details.
-
-## Code Of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct](https://github.com/DarshanAguru/jac/blob/main/CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms to foster an open and welcoming environment.
+All rights for external resources used in this project are reserved by their respective owners. Attribution for each resource is provided as comments within the relevant code files, where applicable. Please refer to the [Attributions](https://darshanaguru.github.io/jac/attributions.html) file for more details.
 
 ## License
 
